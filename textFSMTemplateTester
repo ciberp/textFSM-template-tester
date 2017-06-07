@@ -1,0 +1,23 @@
+#!/usr/bin/env python
+from optparse import OptionParser
+import textfsm
+import sys
+
+def ParseTextToDict(text):
+    """ argument text & TextFSM template to parse, return list of dicts """
+    template = open(sys.argv[2])
+    #print template.read()
+    re_table = textfsm.TextFSM(template)
+    fsm_results = re_table.ParseText(text)
+    return fsm_results
+
+def ReadFile(filename):
+    return open(filename, 'r').read()
+
+if __name__ == '__main__':
+    if len(sys.argv) == 3:
+        ParsedData = ParseTextToDict(ReadFile(sys.argv[1]))
+        print "\ntextFSM results:"
+        print(ParsedData)
+    else:
+        print "\nusage:\n  ./textFSMTemplateTester text_file_to_parse textFSM_template_file\n"

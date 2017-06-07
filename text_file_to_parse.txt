@@ -1,0 +1,42 @@
+    class-map: class-default (match-any)
+      Match: any 
+      police :
+        10000000 bps 312500 limit 312500 extended limit
+      Earl in slot 2 :
+        7348880970 bytes
+        5 minute offered rate 2424 bps
+        aggregate-forwarded 5781281557 bytes action: transmit
+        exceeded 1567599413 bytes action: drop
+        aggregate-forward 1192 bps exceed 0 bps 
+      Earl in slot 4 :
+        9725075625 bytes
+        5 minute offered rate 5376 bps
+        aggregate-forwarded 9693899723 bytes action: transmit
+        exceeded 31175902 bytes action: drop
+        aggregate-forward 6512 bps exceed 0 bps 
+      Earl in slot 6 :
+        5196901384 bytes
+        5 minute offered rate 3040 bps
+        aggregate-forwarded 5177278895 bytes action: transmit
+        exceeded 19622489 bytes action: drop
+        aggregate-forward 2288 bps exceed 0 bps 
+      Earl in slot 7 :
+        55297024021 bytes
+        5 minute offered rate 24936 bps
+        aggregate-forwarded 55202028189 bytes action: transmit
+        exceeded 94995832 bytes action: drop
+        aggregate-forward 17520 bps exceed 0 bps 
+
+  Software Counters: 
+
+    Class-map: class-default (match-any)  
+      760039491 packets, 71730078990 bytes
+      5 minute offered rate 30000 bps, drop rate 0000 bps
+      Match: any 
+      police:
+          cir 10000000 bps, bc 312500 bytes
+        conformed 760039325 packets, 71729967997 bytes; actions:
+          transmit 
+        exceeded 168 packets, 110993 bytes; actions:
+          drop 
+        conformed 29000 bps, exceed 0000 bps        
